@@ -31,7 +31,7 @@ function NavBar() {
           <a href="/">HOME</a>
         </li>
         <li className="nav-item">
-          <a href="/">HIGHLIGHTS</a>
+          <a href="/">PLAN YOUR VISIT</a>
         </li>
         <li className="nav-item">
           <a href="/">FAVORITS</a>
