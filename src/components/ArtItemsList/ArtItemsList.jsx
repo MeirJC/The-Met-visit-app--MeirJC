@@ -3,11 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ArtItemsList.css";
 //================================================
-function ArtItemsList() {
+function ArtItemsList({ setFavArr }) {
   const [categories, setCategories] = useState([]);
   const [artItemsIds, setArtItemsIds] = useState([]);
   const [artItems, setArtItems] = useState([]);
   const [counter, setCounter] = useState(0);
+
   // const [searchInput, setSearchInput] = useState("");
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   //Getting a list of the museums items categories
@@ -65,7 +66,7 @@ function ArtItemsList() {
               getArtItemsIds(e.target.id);
               setTimeout(() => {
                 getArtItems();
-              }, 1200);
+              }, 1800);
               setCounter((prev) => (prev = prev + 24));
             }}
           >
@@ -122,6 +123,9 @@ function ArtItemsList() {
                   </a>
                 )}
                 <img src={image} alt={item.title} />
+                <button onClick={() => setFavArr((prev) => [...prev, item])}>
+                  Add Me!
+                </button>
               </div>
             );
           })}

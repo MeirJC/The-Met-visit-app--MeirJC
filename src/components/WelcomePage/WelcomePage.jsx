@@ -17,14 +17,6 @@ function WelcomePage() {
           <br /> To get the most out of your visit we recommend planing your
           visit ahead.
         </p>
-        {/* <audio
-          className="player"
-          src={song}
-          autoPlay
-          type="audio/mpeg"
-          controls
-          volume={0.2}
-        ></audio> */}
         <Player url={song} />
       </div>
     </div>

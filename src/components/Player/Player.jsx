@@ -28,7 +28,7 @@ const Player = ({ url }) => {
       <div onClick={toggle}>
         {playing ? (
           <span
-            class="material-symbols-outlined"
+            className="material-symbols-outlined"
             style={{
               fontSize: "2rem",
               backgroundColor: "transparent",
@@ -43,7 +43,7 @@ const Player = ({ url }) => {
           </span>
         ) : (
           <span
-            class="material-symbols-outlined"
+            className="material-symbols-outlined"
             style={{
               fontSize: "2rem",
               backgroundColor: "transparent",

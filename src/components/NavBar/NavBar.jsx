@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./NavBar.css";
 import { FaBars, FaTimes } from "react-icons/fa";
+import { Link } from "react-router-dom";
 function NavBar() {
   const logo = (
     <svg
@@ -25,14 +26,14 @@ function NavBar() {
   };
   return (
     <div className="navbar">
-      <a href="/">{logo}</a>
+      <Link to="/">{logo}</Link>
 
       <ul className={click ? "nav-menu active" : "nav-menu"}>
         <li className="nav-item">
-          <a href="/">PLAN YOUR VISIT</a>
+          <Link to="/items">PLAN YOUR VISIT</Link>
         </li>
         <li className="nav-item">
-          <a href="/">FAVORITES</a>
+          <Link to="/favorites">FAVORITES</Link>
         </li>
         <li className="nav-item">
           <a href="/">LOGIN</a>
