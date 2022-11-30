@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
 import "./ArtItemsList.css";
 //================================================
@@ -17,8 +17,11 @@ function ArtItemsList() {
     );
     // console.log("data inside getCategories", data.departments);
     setCategories(data.departments);
+    console.log("getCategories!!!!!!!!!!!!");
   }
-
+  useEffect(() => {
+    getCategories();
+  }, []);
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   // getting a list of the top items by the category selected
   async function getArtItemsIds(id) {
@@ -34,7 +37,7 @@ function ArtItemsList() {
   //=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
   async function getArtItems() {
     // console.log("counter before", counter);
-    for (let i = counter; i < counter + 30 && i < artItemsIds.length; i++) {
+    for (let i = counter; i < counter + 24 && i < artItemsIds.length; i++) {
       const { data } = await axios.get(
         `https://collectionapi.metmuseum.org/public/collection/v1/objects/${artItemsIds[i]}`
       );
@@ -42,7 +45,7 @@ function ArtItemsList() {
       setArtItems((prev) => [...prev, data]);
     }
 
-    setCounter((prev) => (prev = prev + 30));
+    setCounter((prev) => (prev = prev + 24));
   }
   //---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=---=
 
@@ -53,35 +56,18 @@ function ArtItemsList() {
       {console.log("counter after", counter)}
       {console.log("artItems", artItems)}
       <h2>Art List</h2>
-      <button onClick={getCategories}>Get Categories!</button>
-      {/* SCROLLDOWN */}
-      {/* <select
-        value={"INITIAL"}
-        onChange={(e) => {
-          console.log("EEEE", e);
-          getArtItemsIds(e.target.id);
-        }}
-      >
-        {categories.map((category, idx) => {
-          return (
-            <option
-              key={`${category.departmentId}${idx}`}
-              id={category.departmentId}
-              value={category.departmentId}
-              // onClick={(e) => getArtItemsIds(e.target.id)}
-            >
-              {category.displayName}
-            </option>
-          );
-        })}
-      </select> */}
-      {/* BUTTONS */}
       {categories.map((category, idx) => {
         return (
           <div
             key={`${category.departmentId}${idx}`}
             id={category.departmentId}
-            onClick={(e) => getArtItemsIds(e.target.id)}
+            onClick={(e) => {
+              getArtItemsIds(e.target.id);
+              setTimeout(() => {
+                getArtItems();
+              }, 1200);
+              setCounter((prev) => (prev = prev + 24));
+            }}
           >
             {category.displayName}
           </div>
@@ -90,19 +76,36 @@ function ArtItemsList() {
       <br />
       <div className="cardContainer">
         {artItems.length > 0 &&
-          artItems.map((item) => {
+          artItems.map((item, idx) => {
             const image = item.primaryImageSmall
               ? item.primaryImageSmall
               : item.primaryImage
               ? item.primaryImage
-              : item.additionalImages[0];
+              : item.additionalImages[0]
+              ? item.additionalImages[0]
+              : "images/No-Image-Placeholder.png";
             return (
-              <div className="card" key={item.objectID} id={item.objectID}>
+              <div
+                className="card"
+                key={`${item.objectID}+${Math.random() * idx}`}
+                id={item.objectID}
+              >
                 <h4>{item.title}</h4>
                 <p>
                   <i>Artist: </i>
                   {item.artistDisplayName ? item.artistDisplayName : "unknown"}
                 </p>
+                {item.country ? (
+                  <p>
+                    <i>country: </i> {item.country}
+                  </p>
+                ) : (
+                  item.culture && (
+                    <p>
+                      <i>Culture: </i> {item.culture}
+                    </p>
+                  )
+                )}
                 {item.medium && (
                   <p>
                     <i>Medium: </i> {item.medium}
@@ -123,7 +126,9 @@ function ArtItemsList() {
             );
           })}
       </div>
-      <button onClick={() => getArtItems(artItemsIds)}>Get Art Items!</button>
+      {artItemsIds && counter < artItemsIds.length && (
+        <button onClick={() => getArtItems(artItemsIds)}>Get Art Items!</button>
+      )}
     </div>
   );
 }

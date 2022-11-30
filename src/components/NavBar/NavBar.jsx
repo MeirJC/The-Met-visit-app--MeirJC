@@ -25,16 +25,14 @@ function NavBar() {
   };
   return (
     <div className="navbar">
-      {logo}
+      <a href="/">{logo}</a>
+
       <ul className={click ? "nav-menu active" : "nav-menu"}>
-        <li className="nav-item">
-          <a href="/">HOME</a>
-        </li>
         <li className="nav-item">
           <a href="/">PLAN YOUR VISIT</a>
         </li>
         <li className="nav-item">
-          <a href="/">FAVORITS</a>
+          <a href="/">FAVORITES</a>
         </li>
         <li className="nav-item">
           <a href="/">LOGIN</a>

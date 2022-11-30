@@ -31,7 +31,7 @@
   width: calc(100% - 2rem - 60px);
 }
 
-.nav-item:nth-child(3) {
+.nav-item:nth-child(2) {
   margin-right: auto;
 }
 
@@ -52,6 +52,7 @@
 
 .hamburger {
   display: none;
+
 }
 
 @media (max-width: 768px) {
@@ -88,7 +89,7 @@
     display: flex;
   }
 
-  .nav-item:nth-child(3) {
+  .nav-item:nth-child(2) {
     margin: 1.4rem;
 
   }

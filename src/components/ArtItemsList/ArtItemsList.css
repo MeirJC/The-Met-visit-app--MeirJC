@@ -1,5 +1,8 @@
+body {}
+
 .art-list-header {
-  width: 98%;
+  width: 100%;
+  background-color: #ffffff;
 }
 
 .card img {
@@ -14,21 +17,36 @@
 }
 
 .card {
-  font-size: 1.2rem;
   padding: 0.2rem;
-  border: 2px solid #777;
-  border-radius: 0.3rem;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-  box-shadow: 0px 0px 8px 0px #777;
-  background-color: #444;
+  /*  */
+  background: rgba(255, 255, 255, 0.25);
+  box-shadow: 0 4px 16px 2px rgba(31, 38, 135, 0.3);
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border-radius: 0.4rem;
+  border: 5px solid rgba(255, 255, 255, 0.88);
+  /*  */
+  margin-bottom: 1rem;
 }
 
-.card p,
+i {
+  color: #111;
+  font-weight: bold;
+}
+
 .card h4 {
   padding: 0.35rem 0;
   margin: 0.2rem 0;
+  font-size: clamp(1.1rem, 1.2vw, 1.6rem);
+}
+
+.card p {
+  padding: 0.35rem 0;
+  margin: 0.2rem 0;
+  font-size: clamp(0.8rem, 1vw, 1.2rem);
 }
 
 .card a {
@@ -45,9 +63,16 @@
 
 .cardContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-  margin-bottom: 1rem;
-  width: 98%;
+  margin: 0 auto;
+  /* margin-bottom: 1rem; */
+  width: 80%;
 
+}
+
+@media (max-width: 1024px) {
+  .cardContainer {
+    width: 96%;
+  }
 }
