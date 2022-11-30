@@ -114,7 +114,7 @@ function ArtItemsList() {
                   </p>
                 )}
                 {item.objectURL && (
-                  <a href={item.objectURL} target="_blank">
+                  <a href={item.objectURL} target="_blank" rel="noreferrer">
                     Learn More
                   </a>
                 )}
