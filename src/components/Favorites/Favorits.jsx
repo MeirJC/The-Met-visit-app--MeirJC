@@ -1,6 +1,6 @@
 import React from "react";
 import "./Favorits.css";
-import { useState, useEffect } from "react";
+// import { useState, useEffect } from "react";
 // import axios from "axios";
 
 function Favorits({ favArr, setFavArr }) {
