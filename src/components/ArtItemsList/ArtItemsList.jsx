@@ -56,24 +56,28 @@ function ArtItemsList({ setFavArr }) {
     <div className="art-list-header">
       {console.log("counter after", counter)}
       {console.log("artItems", artItems)}
-      <h2>Art List</h2>
-      {categories.map((category, idx) => {
-        return (
-          <div
-            key={`${category.departmentId}${idx}`}
-            id={category.departmentId}
-            onClick={(e) => {
-              getArtItemsIds(e.target.id);
-              setTimeout(() => {
-                getArtItems();
-              }, 1800);
-              setCounter((prev) => (prev = prev + 24));
-            }}
-          >
-            {category.displayName}
-          </div>
-        );
-      })}
+      <h2>Art Items List</h2>
+      <div className="categories">
+        {categories.map((category, idx) => {
+          return (
+            <div
+              className="category"
+              key={`${category.departmentId}${idx}`}
+              id={category.departmentId}
+              onClick={(e) => {
+                getArtItemsIds(e.target.id);
+                setTimeout(() => {
+                  getArtItems();
+                }, 1800);
+                setCounter((prev) => (prev = prev + 24));
+              }}
+            >
+              {category.displayName}
+            </div>
+          );
+        })}
+      </div>
+
       <br />
       <div className="cardContainer">
         {artItems.length > 0 &&
