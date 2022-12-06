@@ -29,4 +29,6 @@ The project was built in React.js and includes usage of state managment, react r
 
 > For any questions, feel free to reach me here or at my [LinkedIn](https://www.linkedin.com/in/meirjcohen) account.
 
+##### Background music: **_balerina_** By the amazing **_Yehezkel Raz_**
+
 <!-- Coming Soon> Project demo is live [here](https://PROJECT-LINK.netlify.app/). -->
