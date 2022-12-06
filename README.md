@@ -1,71 +1,32 @@
-# Getting Started with Create React App
+> # Visit the Met
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+<p align="center">
+  <img src="https://github.com/MeirJC/Memory-Game/blob/main/public/images/screenshot.jpg" width="400" title="Opening Screen" alt="Page Layot">
+</p>
 
-In the project directory, you can run:
+### Description
 
-### `npm start`
+A _Plan your visit_ web-app of _The MET_ museum in NYC.
+In this project ive used the museum public API to fetch the higlighted items of the museum by category and render dinamiclly a card for each of the items. which you can add to favorites by demend and remeber to visit those items in your next visit.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The project was built in React.js and includes usage of state managment, react router, axios, react icons and also involved audio and video implementation.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+###### currently the login option is not available due to time restrictions and troubles implamenting Firebase and Firestore, this will be updated soon for a better functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+#### Technologies:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- JS
+- React
+- HTML/CSS
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> Project video demo is live [here](https://the-met-visit.netlify.app/).
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+> For any questions, feel free to reach me here or at my [LinkedIn](https://www.linkedin.com/in/meirjcohen) account.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# The-Met-visit-app--MeirJC
+<!-- Coming Soon> Project demo is live [here](https://PROJECT-LINK.netlify.app/). -->
