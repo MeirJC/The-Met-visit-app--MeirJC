@@ -3,7 +3,7 @@
 ---
 
 <p align="center">
-  <img src="https://github.com/MeirJC/Memory-Game/blob/main/public/images/screenshot.jpg" width="400" title="Opening Screen" alt="Page Layot">
+  <img src="https://github.com/MeirJC/The-Met-visit-app--MeirJC/blob/main/public/The%20Met%20Screenshot.jpeg" width="400" title="Opening Screen" alt="Page Layot">
 </p>
 
 ### Description
